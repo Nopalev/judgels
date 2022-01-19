@@ -24,14 +24,14 @@ class CourseChapterSidebar extends Component {
   }
 
   render() {
-    const { course, courseChapter } = this.props;
+    const { course, chapter } = this.props;
     const { response } = this.state;
     if (!course || !response) {
       return null;
     }
 
     const { data: chapters, chaptersMap, chapterProgressesMap } = response;
-    const activeChapterJid = courseChapter && courseChapter.chapterJid;
+    const activeChapterJid = chapter && chapter.jid;
 
     let contents = [
       {
@@ -81,7 +81,7 @@ class CourseChapterSidebar extends Component {
 
 const mapStateToProps = state => ({
   course: selectCourse(state),
-  courseChapter: selectCourseChapter(state),
+  chapter: selectCourseChapter(state),
 });
 
 const mapDispatchToProps = {
