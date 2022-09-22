@@ -8,7 +8,7 @@ import UserWidget from '../UserWidget/UserWidget';
 
 import './Header.scss';
 
-import logo from '../../assets/images/logo-header.png';
+import logo from '../../assets/images/Logo-Warna-Schematics.png';
 
 export default class Header extends PureComponent {
   render() {
